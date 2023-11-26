@@ -1,0 +1,34 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <filter>
+    <filter-name>LanguageFilter</filter-name>
+    <filter-class>by.bsuir.wt.fourth.controller.filter.LanguageFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LanguageFilter</filter-name>
+    <url-pattern>/hotel</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>by.bsuir.wt.fourth.controller.Controller</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>/hotel</url-pattern>
+  </servlet-mapping>
+
+  <error-page>
+    <error-code>500</error-code>
+    <location>error.jsp</location>
+  </error-page>
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>error.jsp</location>
+  </error-page>
+
+</web-app>
